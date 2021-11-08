@@ -11,8 +11,11 @@ const forecast=(latitude,longitude,callback)=>{
             callback("unable to find location",undefined) 
         }
         else{
-            callback(undefined,{text:body.forecast.forecastday[0].day.condition.text,
-                                icon:body.forecast.forecastday[0].day.condition.icon})
+            callback(undefined,{temprature:body.current.temp_c,
+                                text:body.current.condition.text,
+                                icon:body.current.condition.icon,
+                                updated:body.current.last_updated,
+                                isday:body.current.is_day})
         }
     })
 }
