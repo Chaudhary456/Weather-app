@@ -30,7 +30,7 @@ weatherForm.addEventListener('submit',(e)=>{
                 msg2.textContent=data.forecast.temprature+" °C"
                 msg3.textContent=data.forecast.text
                 msg4.src=data.forecast.icon
-                msg5.textContent=data.forecast.last_updated
+                msg5.textContent="Last Updated: "+data.forecast.updated
                 if(data.forecast.isday){
                     msg6.textContent="Day"
                 }
