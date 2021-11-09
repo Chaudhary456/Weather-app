@@ -7,6 +7,8 @@ const msg3= document.querySelector('#msg-3')
 const msg4= document.querySelector('#msg-4')
 const msg5= document.querySelector('#msg-5')
 const msg6= document.querySelector('#msg-6')
+const msg7= document.querySelector('#msg-7')
+const msg8= document.querySelector('#msg-8')
 
 
 weatherForm.addEventListener('submit',(e)=>{
@@ -19,6 +21,8 @@ weatherForm.addEventListener('submit',(e)=>{
     msg4.src=""
     msg5.textContent=""
     msg6.textContent=""
+    msg7.textContent=""
+    msg8.textContent=""
 
     fetch('/weather?address='+location).then((response)=>{
         response.json().then((data)=>{
@@ -30,6 +34,8 @@ weatherForm.addEventListener('submit',(e)=>{
                 msg2.textContent=data.forecast.temprature+" °C"
                 msg3.textContent=data.forecast.text
                 msg4.src=data.forecast.icon
+                msg7.textContent="AQI PM2.5 : "+data.forecast.pm2_5
+                msg8.textContent="AQI PM10 : "+data.forecast.pm10
                 msg5.textContent="Last Updated: "+data.forecast.updated
                 if(data.forecast.isday){
                     msg6.textContent="Day"

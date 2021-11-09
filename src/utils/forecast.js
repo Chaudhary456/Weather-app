@@ -12,6 +12,8 @@ const forecast=(latitude,longitude,callback)=>{
         }
         else{
             callback(undefined,{temprature:body.current.temp_c,
+                                pm2_5:body.current.air_quality.pm2_5,
+                                pm10:body.current.air_quality.pm10,
                                 text:body.current.condition.text,
                                 icon:body.current.condition.icon,
                                 updated:body.current.last_updated,
