@@ -4,10 +4,9 @@ body {
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
-
     display: flex;
     flex-direction: column;
-    min-height: 100vh
+    min-height: 550px
 }
 
 .main-content {
@@ -39,8 +38,8 @@ header a {
 button{
     cursor: pointer;
     border: 1px solid rgb(156, 83, 83);
-    background: white;
-    color: red;
+    background: blueviolet;
+    color: white;
 }
 
 .portrait {
